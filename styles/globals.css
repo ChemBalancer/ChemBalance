@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply text-zinc-900;
+    /* Light-mode background */
+    background-color: #fdfdfd;
+    background-image: url("/bg-molecules-desktop.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .dark html,
+  .dark body {
+    @apply text-zinc-100;
+    /* Dark-mode background */
+    background-color: #020617; /* near zinc-950 */
+    background-image: url("/bg-molecules-dark.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  /* optional: nicer borders in dark */
+  :root {
+    --border: 228 13% 80%;
+  }
+  .dark :root {
+    --border: 240 5% 26%;
+  }
+}
+
+@layer utilities {
+  .bg-molecules {
+    background-image: url("/bg-molecules-desktop.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Swap image in dark mode */
+  .dark .bg-molecules {
+    background-image: url("/bg-molecules-dark.webp");
+  }
+}
