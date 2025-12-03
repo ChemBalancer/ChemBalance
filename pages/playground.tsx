@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import AppLayout from "../components/AppLayout";
+import Head from "next/head";
 
 const EquationBalancerPlayground = dynamic(
   () => import("../components/EquationBalancerPlayground"),
@@ -9,6 +10,16 @@ const EquationBalancerPlayground = dynamic(
 export default function PlaygroundPage() {
   return (
     <AppLayout>
+<Head>
+  <title>Chemometry Playground — Balance Chemical Equations</title>
+  <meta
+    name="description"
+    content="Use Chemometry’s interactive playground to balance chemistry equations with real-time atom counting, hints, and animated molecule chips."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://chemometry.io/playground" />
+</Head>
+
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-8">
         <header className="mb-4">
           <h1 className="text-2xl font-semibold tracking-tight">Playground</h1>

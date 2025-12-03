@@ -55,12 +55,17 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <div className="min-h-screen bg-surface/85 dark:bg-ink/90">
         <header className="sticky top-0 z-20 backdrop-blur bg-surface/70 dark:bg-ink/80 border-b border-brand/20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 py-3 flex items-center gap-4">
-            <Link
-              href="/"
-              className="font-semibold tracking-tight text-lg text-ink dark:text-surface"
-            >
-              🧪 ChemBalance
-            </Link>
+            
+<Link href="/" className="flex items-center gap-2">
+  <img
+    src="/Logo.svg"
+    alt="Chemometry logo"
+    className="h-7 w-auto"
+  />
+  <span className="font-semibold tracking-tight text-lg">
+    Chemometry
+  </span>
+</Link>
             <nav className="ml-auto flex items-center gap-4">
               <Link
                 href="/playground"
